@@ -21,7 +21,7 @@ test('Locators', async ({page})=>{
     await page.click("//button[normalize-space()='Log in']")
 
     // verify logout link is visible or not
-    const logoutLink = await page.locator("//button[normalize-space()='Log out']");
+    const logoutLink = await page.locator("//a[normalize-space()='Log out']");
 
     // verify logout link is visible or not
     await expect(logoutLink).toBeVisible();
@@ -34,4 +34,23 @@ test('Locators', async ({page})=>{
 // Locators element in playwright
 // i. property selector
 // ii. css selector
-// i. xpath selector
+// iii. xpath selector
+
+// -----------------------
+//Locate single webElement
+// -----------------------
+// Link / button
+// ---------
+// await page.locator('locator').click()
+// await page.click('locator');
+// ---------
+// input box
+// ---------
+// await page.locator('locator').fill('value')
+// await page.locator('locator').type('value') // may be deprecated have to see
+// await page.fill('locator', 'value');
+// await page.type('locator', 'value');
+// -----------------------
+//Locate multiple webElements
+// -----------------------
+// const elements = await page.$$(locator)
