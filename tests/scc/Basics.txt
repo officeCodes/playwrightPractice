@@ -2,4 +2,5 @@
 2. Locators(https://playwright.dev/docs/locators) Built-in Locators >> page.getByRole(locators)
 3. Assertions(https://playwright.dev/docs/test-assertions) vid 7 - Hard_Asserions - Auto-retrying assertions
 4. Assertions(https://playwright.dev/docs/test-assertions) vid 8 - Soft_Assertions - Non-retrying assertions
-5. Actions(https://playwright.dev/docs/input) Vid 9 -
+5. Actions(https://playwright.dev/docs/input) Vid 9 | Actions | Handle InputBox and RadioButtons
+6. Actions(https://playwright.dev/docs/input) Vid 10 | Actions | Handle Multiple CheckBoxes
