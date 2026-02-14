@@ -40,8 +40,12 @@ test("Handle CheckBoxes", async ({page})=>{
             await page.locator(locator).uncheck();
         }
     }
-    // ((//tbody)[2]//input)[1-25]
 
-//
+    // handle multiple check boxes my-code
+    // ((//tbody)[2]//input)[1-10]
+    for (let i=1; i<=10; i++){
+        await page.waitForTimeout(500);
+        await page.check(`((//tbody)[2]//input)[${i}]`);
+    }
 
 })
