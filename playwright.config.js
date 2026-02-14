@@ -27,6 +27,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
       headless: false,
+      fullPage: true,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -68,7 +69,14 @@ export default defineConfig({
     // },
     {
       name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      use: {  
+        channel: 'chrome',
+        headless: false,
+        launchOptions: {
+          args: ['--start-maximized']
+        },
+        viewport: null
+      },
     },
   ],
 
