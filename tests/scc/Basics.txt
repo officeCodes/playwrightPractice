@@ -4,3 +4,4 @@
 4. Assertions(https://playwright.dev/docs/test-assertions) vid 8 - Soft_Assertions - Non-retrying assertions
 5. Actions(https://playwright.dev/docs/input) Vid 9 | Actions | Handle InputBox and RadioButtons
 6. Actions(https://playwright.dev/docs/input) Vid 10 | Actions | Handle Multiple CheckBoxes
+7. Actions Vid 11 | Actions | Handle Dropdown
