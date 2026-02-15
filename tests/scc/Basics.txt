@@ -6,3 +6,4 @@
 6. Actions(https://playwright.dev/docs/input) Vid 10 | Actions | Handle Multiple CheckBoxes
 7. Actions Vid 11 | Actions | Handle Dropdown
 8. Actions Vid 12 | Actions | Handle Multi Select Dropdown
+9. Actions Vid 13 | Actions | Handle BootStrap Dropdown
