@@ -38,6 +38,18 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+      {
+        name: 'unitTest',
+        testDir: './tests/practice/LocatorsPractice/',
+          use: {
+              channel: 'chrome',
+              headless: false,
+              launchOptions: {
+                  args: ['--start-maximized'],
+              },
+              viewport: null,
+          },
+      },
     // {
     //   name: 'chrome',
     //   use: { ...devices['Desktop Chrome'] },
