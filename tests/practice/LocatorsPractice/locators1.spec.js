@@ -18,11 +18,11 @@ import {expect, test} from '@playwright/test';
 test("getByRole('heading')", async ({page})=>{
     await page.goto('https://selectorshub.com/xpath-practice-page/');
     const expectedHeading = "Find Out How To Automate These Controls Without XPath";
-    const livePageHeadingTxt=await page.getByRole('heading', {name: expectedHeading});
-    // const livePageHeadingTxt22=await page.getByRole('heading', {name: expectedHeading}).innerText();
-    console.log(JSON.stringify(await livePageHeadingTxt.innerText()));
-    console.log(await livePageHeadingTxt.innerText())
-    // expect(expectedHeading).toEqual(await livePageHeadingTxt.innerText());
+    // const livePageHeadingTxt=await page.getByRole('heading', {name: expectedHeading});
+    const livePageHeadingTxt22=await page.getByRole('heading', {name: expectedHeading}).innerText();
+    console.log(JSON.stringify(livePageHeadingTxt22));
+    console.log(livePageHeadingTxt22)
+    await expect(page.getByRole('heading', {name: expectedHeading})).toHaveText(expectedHeading);
     //
     /*
     await page.goto('https://selectorshub.com/xpath-practice-page/');
@@ -134,4 +134,32 @@ If not wrapped,
 it returns single line.
 
 So even window width can change output.
-* */
+*
+*
+*
+🧠 Interview-Level Explanation
+
+If interviewer asks:
+
+Why same locator gives different innerText output?
+
+Answer:
+
+innerText depends on rendered layout. If CSS wrapping or animation changes how text is visually displayed, innerText will include line breaks. The DOM didn't change semantically, but rendering did.
+
+That’s senior-level understanding.
+*
+*
+*
+💡 Final Takeaway
+
+Your test results changed because:
+
+innerText() → layout dependent
+
+textContent() → raw DOM including formatting
+
+The site uses animated heading + formatted markup
+
+Whitespace is preserved in DOM
+ */
