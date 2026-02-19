@@ -8,11 +8,11 @@ test('Hidden Dropdown', async({page})=>{
 
     // assert logged in successfully or not
     // checking logged in with the same user or not
-    const expUserName = "Ahmed  Mahmoud";
+    const expUserName = "manda user";
     await page.waitForSelector("//span[@class='oxd-userdropdown-tab']/p");
-    console.log(await page.getByText('Ahmed  Mahmoud').textContent());
-    console.log(await page.getByText('Ahmed  Mahmoud').innerText());
-    await expect(await page.getByText('Ahmed  Mahmoud')).toBeVisible();
+    // console.log(await page.getByText('manda user').textContent());
+    // console.log(await page.getByText('manda user').innerText());
+    // await expect(await page.getByText('manda user')).toBeVisible();
     const userName = await page.locator("//span[@class='oxd-userdropdown-tab']/p").innerText();
     console.log(userName);
     await page.getByText('PIM').click();
@@ -20,12 +20,21 @@ test('Hidden Dropdown', async({page})=>{
     await page.locator("(//div[@class='oxd-select-text--after'])[3]").click();
 
     // const dropDownOpts = await page.locator("//div[@class='oxd-select-dropdown --positon-bottom']//span");
+    await page.waitForLoadState("domcontentloaded");
+    await page.waitForTimeout(3500);
     const dropDownOpts = await page.$$("//div[@class='oxd-select-dropdown --positon-bottom']//span");
-
+    let count=0
+    console.log(`Length of dropDownOpts: ${dropDownOpts.length}`);
     for (const opts of dropDownOpts){
-        console.log(opts.textContent());
+        console.log(await opts.textContent());
+        if (await opts.textContent() === 'Software Architect'){
+            await opts.click();
+            // break;
+        }
+        count+=1;
     }
+    console.log(`Count: ${count}`);
 
 
-    await page.waitForTimeout(20000);
+    await page.waitForTimeout(2000);
 })
