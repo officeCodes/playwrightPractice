@@ -10,4 +10,5 @@
 10. Actions Vid 14 | Actions | Handle RedBus AutoSuggestion/AutoComplete Dropdown
 11. Vid 15 | Actions | Handle Hidden Dropdown
 12. Vid 16 | Actions | 16_Handle_Dialogs_or_Alerts
-13. Vid 17 | Actions | 16_How to Handle Frames/iFrames
+13. Vid 17 | Actions | 17_How to Handle Frames/iFrames
+14. Vid 18 | Actions | 18_How to Handle Inner/Nested Frames
