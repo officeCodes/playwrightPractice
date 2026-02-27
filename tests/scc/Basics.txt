@@ -12,3 +12,4 @@
 12. Vid 16 | Actions | 16_Handle_Dialogs_or_Alerts
 13. Vid 17 | Actions | 17_How to Handle Frames/iFrames
 14. Vid 18 | Actions | 18_How to Handle Inner/Nested Frames
+15. Vid 19 | Actions | 19_Handle WebTable/Pagination Table
