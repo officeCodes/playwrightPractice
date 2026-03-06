@@ -36,7 +36,7 @@ export default defineConfig({
     // trace: 'on-first-retry',
       trace: 'retain-on-failure',
       video: 'retain-on-failure',
-      screenshot: 'only-on-failure',
+      screenshot: 'only-on-failure', // if screenshot: on // then for every test() cases it will capture a screenshot // and we can see the screenshot only on the report
       actionTimeout: 10000,
       navigationTimeout: 30000
   },
